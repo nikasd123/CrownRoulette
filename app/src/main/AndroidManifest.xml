@@ -13,8 +13,9 @@
         android:theme="@style/Theme.CrouwRoulette"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.activity.MainActivity"
             android:exported="false"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.CrouwRoulette" />
     </application>

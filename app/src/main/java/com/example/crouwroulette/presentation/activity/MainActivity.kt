@@ -1,4 +1,4 @@
-package com.example.crouwroulette
+package com.example.crouwroulette.presentation.activity
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.crouwroulette.R
 import com.example.crouwroulette.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
