@@ -3,11 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splash_activity">
+    app:startDestination="@id/gameChoiceFragment">
 
     <activity
         android:id="@+id/splash_activity"
         android:name="com.example.crouwroulette.presentation.activity.SplashActivity"
         tools:layout="@layout/activity_splash">
     </activity>
+
+    <fragment
+        android:id="@+id/gameChoiceFragment"
+        android:name="com.example.crouwroulette.presentation.fragments.GameChoiceFragment"
+        android:label="fragment_game_choice"
+        tools:layout="@layout/fragment_game_choice" />
 </navigation>
