@@ -22,7 +22,8 @@
         </activity>
         <activity
             android:name=".presentation.activity.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
