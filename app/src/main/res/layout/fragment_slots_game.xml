@@ -8,25 +8,17 @@
     android:padding="20dp"
     tools:context=".presentation.fragments.SlotsGameFragment">
 
-    <FrameLayout
+
+    <ImageButton
+        android:id="@+id/from_slots_game_to_main_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@null"
+        android:foreground="@drawable/icon_back"
+        android:foregroundGravity="center"
+        android:src="@drawable/back_button_bg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:src="@drawable/back_button_bg" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/icon_back" />
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <GridLayout
         android:id="@+id/slots"
@@ -171,7 +163,7 @@
     </GridLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_roulette_spin"
+        android:id="@+id/button_slots_spin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
@@ -193,7 +185,7 @@
         android:paddingBottom="10dp"
         android:translationX="-50dp"
         android:translationY="-20dp"
-        app:layout_constraintEnd_toStartOf="@+id/button_roulette_spin"
+        app:layout_constraintEnd_toStartOf="@+id/button_slots_spin"
         app:layout_constraintTop_toBottomOf="@+id/slots">
 
         <com.veeyaar.supergradienttextview.GradientTextView
@@ -266,7 +258,7 @@
         android:translationX="50dp"
         android:translationY="-20dp"
         android:paddingHorizontal="15sp"
-        app:layout_constraintStart_toEndOf="@+id/button_roulette_spin"
+        app:layout_constraintStart_toEndOf="@+id/button_slots_spin"
         app:layout_constraintTop_toBottomOf="@+id/slots" >
 
         <TextView

@@ -3,69 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/all_bg"
+    android:paddingTop="20dp"
+    android:paddingHorizontal="40dp"
+    android:paddingBottom="40dp"
     tools:context=".presentation.fragments.PrivacyFragment">
 
-    <RelativeLayout
+    <ImageButton
+        android:id="@+id/from_privacy_to_main_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:foreground="@drawable/icon_back"
+        android:foregroundGravity="center"
+        android:src="@drawable/back_button_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/privacy_text"/>
+
+    <FrameLayout
+        android:id="@+id/privacy_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/privacy_text_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_privacy_to_main_menu">
 
-        <ImageView
-            android:id="@+id/splash_bg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/all_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/taviraj_medium"
+            android:layout_margin="15sp"
+            android:textSize="15sp"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="50dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/back_button_bg"
-                        android:background="@null"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_back"
-                        android:layout_gravity="center"/>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/privacy_text_bg">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/privacy_text"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/taviraj_medium"
-                        android:layout_margin="15sp"
-                        android:textSize="15sp"/>
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-        </FrameLayout>
-
-    </RelativeLayout>
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
