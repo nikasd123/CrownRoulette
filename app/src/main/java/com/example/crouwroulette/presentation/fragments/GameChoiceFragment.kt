@@ -35,7 +35,7 @@ class GameChoiceFragment : Fragment(R.layout.fragment_game_choice) {
     }
 
     private fun navigateToSlotsGame() {
-        binding.buttonPrivacy.setOnClickListener {
+        binding.buttonSlotsPlay.setOnClickListener {
             findNavController().navigate(
                 R.id.action_gameChoiceFragment_to_slots_game
             )
@@ -43,7 +43,7 @@ class GameChoiceFragment : Fragment(R.layout.fragment_game_choice) {
     }
 
     private fun navigateToRouletteGame() {
-        binding.buttonPrivacy.setOnClickListener {
+        binding.buttonRoulettePlay.setOnClickListener {
             findNavController().navigate(
                 R.id.action_gameChoiceFragment_to_roulette_game
             )
