@@ -1,13 +1,13 @@
 package com.example.crouwroulette.presentation.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.crouwroulette.R
 import com.example.crouwroulette.databinding.FragmentRouletteGameBinding
+import com.example.crouwroulette.presentation.DecelerateAccelerateInterpolator
 
 class RouletteGameFragment : Fragment(R.layout.fragment_roulette_game) {
 
@@ -18,6 +18,7 @@ class RouletteGameFragment : Fragment(R.layout.fragment_roulette_game) {
 
         binding = FragmentRouletteGameBinding.bind(view)
         navigateToMainMenu()
+        rotateWheelAnimation()
     }
 
     private fun navigateToMainMenu() {
@@ -26,5 +27,13 @@ class RouletteGameFragment : Fragment(R.layout.fragment_roulette_game) {
                 R.id.action_roulette_game_to_gameChoiceFragment
             )
         }
+    }
+
+    private fun rotateWheelAnimation() {
+        val animation = AnimationUtils.loadAnimation(requireContext(), R.anim.rotate)
+
+        animation.interpolator = DecelerateAccelerateInterpolator()
+
+        binding.rouletteSectors.startAnimation(animation)
     }
 }
