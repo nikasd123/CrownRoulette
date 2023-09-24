@@ -196,13 +196,14 @@
         app:layout_constraintEnd_toStartOf="@+id/button_roulette_spin"
         app:layout_constraintTop_toBottomOf="@+id/slots">
 
-        <TextView
+        <com.veeyaar.supergradienttextview.GradientTextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/taviraj_medium"
             android:text="2300"
-            android:textColor="@color/white"
+            app:startColor="@color/brown"
+            app:endColor="@color/gold"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -222,13 +223,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <TextView
+        <com.veeyaar.supergradienttextview.GradientTextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/taviraj_medium"
             android:text="200"
-            android:textColor="@color/white"
+            app:startColor="@color/brown"
+            app:endColor="@color/gold"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -280,14 +282,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <com.veeyaar.supergradienttextview.GradientTextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/taviraj_medium"
             android:text="400"
             android:paddingBottom="10dp"
-            android:textColor="@color/white"
+            app:startColor="@color/brown"
+            app:endColor="@color/gold"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
