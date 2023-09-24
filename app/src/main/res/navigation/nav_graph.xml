@@ -14,6 +14,42 @@
     <fragment
         android:id="@+id/gameChoiceFragment"
         android:name="com.example.crouwroulette.presentation.fragments.GameChoiceFragment"
-        android:label="fragment_game_choice"
-        tools:layout="@layout/fragment_game_choice" />
+        tools:layout="@layout/fragment_game_choice" >
+        <action
+            android:id="@+id/action_gameChoiceFragment_to_slots_game"
+            app:destination="@id/slots_game" />
+        <action
+            android:id="@+id/action_gameChoiceFragment_to_roulette_game"
+            app:destination="@id/roulette_game" />
+        <action
+            android:id="@+id/action_gameChoiceFragment_to_privacy"
+            app:destination="@id/privacy" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/slots_game"
+        android:name="com.example.crouwroulette.presentation.fragments.SlotsGameFragment"
+        tools:layout="@layout/fragment_slots_game" >
+        <action
+            android:id="@+id/action_slots_game_to_gameChoiceFragment"
+            app:destination="@id/gameChoiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/roulette_game"
+        android:name="com.example.crouwroulette.presentation.fragments.RouletteGameFragment"
+        tools:layout="@layout/fragment_roulette_game">
+        <action
+            android:id="@+id/action_roulette_game_to_gameChoiceFragment"
+            app:destination="@id/gameChoiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/privacy"
+        android:name="com.example.crouwroulette.presentation.fragments.PrivacyFragment"
+        tools:layout="@layout/fragment_privacy">
+        <action
+            android:id="@+id/action_privacy_to_gameChoiceFragment"
+            app:destination="@id/gameChoiceFragment" />
+    </fragment>
 </navigation>
