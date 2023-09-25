@@ -21,6 +21,10 @@ class RouletteGameFragment : Fragment(R.layout.fragment_roulette_game) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentRouletteGameBinding.bind(view)
+        initFun()
+    }
+
+    private fun initFun() {
         navigateToMainMenu()
         rotateWheelAnimation()
         rotateWheelBySpinButtonAnimation()
