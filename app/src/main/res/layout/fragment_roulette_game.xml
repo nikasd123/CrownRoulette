@@ -53,7 +53,7 @@
     </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_slots_spin"
+        android:id="@+id/button_roulette_spin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
@@ -73,7 +73,7 @@
         android:paddingTop="3dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_slots_spin"
+        app:layout_constraintEnd_toStartOf="@+id/button_roulette_spin"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.veeyaar.supergradienttextview.GradientTextView
@@ -146,7 +146,7 @@
         android:paddingHorizontal="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button_slots_spin">
+        app:layout_constraintStart_toEndOf="@id/button_roulette_spin">
 
         <TextView
             android:id="@+id/textView5"
